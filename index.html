@@ -19,6 +19,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     line-height: 24px;
+    color: #1c1819;
 }
 
 .modal {
@@ -36,12 +37,12 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: hsla(345, 8%, 10%, 1);
+    background: #1c1819;
+    opacity: 0.6;
     z-index: -1;
 }
 
 .container {
-    width: 1039px;
     position: relative;
     display: flex;
     align-items: flex-start;
@@ -78,7 +79,7 @@ body {
     justify-content: center;
     width: 330px;
     flex-wrap: wrap;
-    padding: 12px;
+    padding-top: 12px;
 }
 
 .preview-container img {
@@ -132,6 +133,11 @@ body {
     line-height: inherit;
     box-shadow: 0 2px 4px rgba(28, 24, 25, 0.1);
     border-radius: 8px;
+    transition: 0.1s box-shadow ease-out;
+}
+
+.pricebtn-container .btn:active {
+    box-shadow: 0 2px 4px rgba(28, 24, 25, 0);
 }
 
 .balance-container {
@@ -161,6 +167,104 @@ body {
     font-size: 16px;
     line-height: inherit;
     color: #1c1819;
+}
+
+input[type=radio] {
+    display: none;
+}
+
+label {
+    display: inline-flex;
+}
+
+.colors-container .title {
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.colors-container {
+    margin-top: 24px;
+}
+
+.colors-container .color {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    color: #2a81dd;
+    border: 1px solid rgba(28, 24, 25, 0.1);
+    box-sizing: border-box;
+    padding: 8px;
+    padding-right: 12px;
+    margin-top: 8px;
+    margin-right: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+input[name=color]:checked + .label .color {
+    color: #1c1819;
+    background: #d6ecfb;
+}
+
+.colors-container .square {
+    width: 23px;
+    height: 24px;
+    margin-right: 8px;
+    border-radius: 4px;
+}
+
+label[for=blue] .square {
+    background: #00458a;
+}
+
+label[for=beige] .square {
+    background: #efe8d8;
+}
+
+label[for=grey] .square {
+    background: #d4d4da;
+}
+
+.sizes-container {
+    margin-top: 24px;
+}
+
+.sizes-container .title {
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.sizes-container .size {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: #2a81dd;
+    border: 1px solid rgba(28, 24, 25, 0.1);
+    box-sizing: border-box;
+    margin-top: 8px;
+    margin-right: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+input[name=size]:checked + .label .size {
+    color: #1c1819;
+    background: #d6ecfb;
+}
+
+.details-container,
+.howchoose-container {
+    margin-top: 24px;
+}
+
+.details-container .title,
+.howchoose-container .title {
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: 600;
 }
     </style>
   </head>
@@ -239,22 +343,22 @@ body {
                         </h3>
                         <input type="radio" id="blue" name="color" value="blue" checked>
                         <label for="blue" class="label">
-                            <div class="square"></div>
                             <div class="color">
+                                <div class="square"></div>
                                 Синий
                             </div>
                         </label>
                         <input type="radio" id="beige" name="color" value="beige">
                         <label for="beige" class="label">
-                            <div class="square"></div>
                             <div class="color">
+                                <div class="square"></div>
                                 Бежевый
                             </div>
                         </label>
                         <input type="radio" id="grey" name="color" value="grey">
                         <label for="grey" class="label">
-                            <div class="square"></div>
                             <div class="color">
+                                <div class="square"></div>
                                 Серый
                             </div>
                         </label>
