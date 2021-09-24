@@ -6,91 +6,162 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>lesson2</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
 
-        * {
-            margin: 0;
-            border: 0;
-            outline: 0;
-            box-sizing: border-box;
-        }
+* {
+    margin: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
 
-        body {
-            font-family: 'Open Sans', sans-serif;
-            font-size: 14px;
-            line-height: 24px;
-        }
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+}
 
-        .modal {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100vw;
-            height: 100vh;
-        }
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
 
-        .container::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background: hsla(345, 8%, 10%, 1);
-            z-index: -1;
-        }
+.container::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: hsla(345, 8%, 10%, 1);
+    z-index: -1;
+}
 
-        .container {
-            width: 1039px;
-            position: relative;
-            display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
-            background: #fff;
-            border-radius: 16px;
-            padding: 56px;
-        }
+.container {
+    width: 1039px;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    background: #fff;
+    border-radius: 16px;
+    padding: 56px;
+}
 
-        .close {
-            position: absolute;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            top: 24px;
-            right: 24px;
-            background-color: unset;
-        }
+.close {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 24px;
+    right: 24px;
+    background-color: unset;
+}
 
-        .btn {
-            cursor: pointer;
-        }
+.btn {
+    cursor: pointer;
+}
 
-        .fotocontainer {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 330px;
-        }
+.fotocontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 330px;
+}
 
-        .preview-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 330px;
-            flex-wrap: wrap;
-            padding: 12px;
-        }
+.preview-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 330px;
+    flex-wrap: wrap;
+    padding: 12px;
+}
 
-        .preview-container img {
-            margin: 4px;
-            border-radius: 8px;
-            cursor: pointer;
-        }
+.preview-container img {
+    margin: 4px;
+    border-radius: 8px;
+    cursor: pointer;
+}
 
-        .preview-container img + .active {
-            border: 1px solid #2a81dd;
-            box-sizing: content-box;
-        }
+.preview-container img + .active {
+    border: 1px solid #2a81dd;
+    box-sizing: content-box;
+}
+
+.description {
+    width: 573px;
+    padding: 8px 0;
+}
+
+.description .title {
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 400;
+}
+
+.price-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+
+.pricebtn-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.pricebtn-container .price {
+    position: relative;
+    left: 0;
+    top: -8px;
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 600;
+}
+
+.pricebtn-container .btn {
+    padding: 6px;
+    width: 184px;
+    background: #ffdd61;
+    font-size: inherit;
+    line-height: inherit;
+    box-shadow: 0 2px 4px rgba(28, 24, 25, 0.1);
+    border-radius: 8px;
+}
+
+.balance-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 196px;
+    height: 68px;
+    background: #f0fafd;
+    border-radius: 16px;
+    padding: 8px 16px;
+}
+
+.tvoibalans-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tvoibalans-container .title {
+    font-size: inherit;
+    line-height: inherit;
+    color: #888b94;
+}
+
+.tvoibalans-container .balance {
+    font-size: 16px;
+    line-height: inherit;
+    color: #1c1819;
+}
     </style>
   </head>
   <body>
@@ -166,7 +237,7 @@
                         <h3 class="title">
                             Цвета:
                         </h3>
-                        <input type="radio" id="blue" name="color" value="blue">
+                        <input type="radio" id="blue" name="color" value="blue" checked>
                         <label for="blue" class="label">
                             <div class="square"></div>
                             <div class="color">
@@ -192,7 +263,7 @@
                         <h3 class="title">
                             Размер:
                         </h3>
-                        <input type="radio" id="s" name="size" value="s">
+                        <input type="radio" id="s" name="size" value="s" checked>
                         <label for="s" class="label">
                             <div class="size">
                                 S
