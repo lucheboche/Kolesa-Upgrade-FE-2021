@@ -5,17 +5,105 @@
     <link rel="icon" type="image/svg+xml" href="/src/assets/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>lesson2</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+        * {
+            margin: 0;
+            border: 0;
+            outline: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 14px;
+            line-height: 24px;
+        }
+
+        .modal {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .container::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: hsla(345, 8%, 10%, 1);
+            z-index: -1;
+        }
+
+        .container {
+            width: 1039px;
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            background: #fff;
+            border-radius: 16px;
+            padding: 56px;
+        }
+
+        .close {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            top: 24px;
+            right: 24px;
+            background-color: unset;
+        }
+
+        .btn {
+            cursor: pointer;
+        }
+
+        .fotocontainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 330px;
+        }
+
+        .preview-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 330px;
+            flex-wrap: wrap;
+            padding: 12px;
+        }
+
+        .preview-container img {
+            margin: 4px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .preview-container img + .active {
+            border: 1px solid #2a81dd;
+            box-sizing: content-box;
+        }
+    </style>
   </head>
   <body>
     <div class="modal">
         <div class="container">
-            <img
-            src="/src/img/close-big.svg"
-            alt="close"
-            class="image close-big"
-            width="32"
-            height="32"
-            >
+            <button class="btn close">
+                <img
+                src="/src/img/close-big.svg"
+                alt="close"
+                width="32"
+                height="32"
+                >
+            </button>
             <div class="fotocontainer">
                 <img
                 src="/src/img/image 7.png"
@@ -35,7 +123,7 @@
                     <img
                     src="/src/img/small2.png"
                     alt="Превью2"
-                    class="image"
+                    class="image active"
                     width="50"
                     height="50"
                     >
