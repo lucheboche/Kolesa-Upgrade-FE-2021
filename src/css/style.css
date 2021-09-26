@@ -1,8 +1,268 @@
-#app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+:root {
+    --main-color: #1c1819;
+    --second-color: #2a81dd;
+    --btn-bg-color-yellow: #ffdd61;
+    --balans-bg-color: #f0fafd;
+    --balans-title-color: #888b94;
+    --radio-checked-bg-color: #d6ecfb;
+    --colors-square-blue: #00458a;
+    --colors-square-beige: #efe8d8;
+    --colors-square-grey: #d4d4da;
+    --border-shadow-color: rgba(28, 24, 25, 0.1);
+    --none-color: rgba(0, 0, 0, 0);
+}
+
+* {
+    margin: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    color: var(--main-color);
+}
+
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--main-color);
+    opacity: 0.6;
+    z-index: -1;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    background: white;
+    border-radius: 16px;
+    padding: 56px;
+}
+
+.close {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 24px;
+    right: 24px;
+    background-color: unset;
+}
+
+.btn {
+    cursor: pointer;
+    padding: 0;
+}
+
+.fotocontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 330px;
+    margin-right: 24px;
+}
+
+.preview-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 330px;
+    flex-wrap: wrap;
+    padding-top: 16px;
+}
+
+.small {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin: 0 4px 8px 4px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.preview-container input:checked + .small::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    z-index: 1;
+    border: 1px solid var(--second-color);
+}
+
+.description {
+    width: 573px;
+    padding: 8px 0;
+}
+
+.description .title {
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 400;
+}
+
+.price-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+
+.pricebtn-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.pricebtn-container .price {
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 600;
+    transform: translateY(-8px);
+}
+
+.pricebtn-container .btn {
+    padding: 6px;
+    min-width: 184px;
+    background: var(--btn-bg-color-yellow);
+    font-size: inherit;
+    line-height: inherit;
+    box-shadow: 0 2px 4px var(--border-shadow-color);
+    border-radius: 8px;
+    transition: 0.1s box-shadow ease-out;
+}
+
+.pricebtn-container .btn:active {
+    box-shadow: 0 2px 4px var(--none-color);
+}
+
+.balance-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 196px;
+    height: 68px;
+    background: var(--balans-bg-color);
+    border-radius: 16px;
+    padding: 8px 16px;
+}
+
+.tvoibalans-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tvoibalans-container .title {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    color: var(--balans-title-color);
+}
+
+.tvoibalans-container .balance {
+    font-size: 16px;
+    color: var(--main-color);
+}
+
+input[type=radio] {
+    display: none;
+}
+
+.options {
+    display: flex;
+}
+
+.colors-container .title,
+.sizes-container .title {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.colors-container,
+.sizes-container,
+.details-container,
+.howchoose-container {
+    margin-top: 24px;
+}
+
+.colors-container .color,
+.sizes-container .size {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    height: 40px;
+    color: var(--second-color);
+    border: 1px solid var(--border-shadow-color);
+    padding: 8px;
+    margin-top: 8px;
+    margin-right: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.colors-container .color {
+    padding-right: 12px;
+}
+
+input[name=color]:checked + .label .color,
+input[name=size]:checked + .label .size {
+    color: var(--main-color);
+    background: var(--radio-checked-bg-color);
+    border: 1px solid var(--none-color);
+}
+
+.colors-container .square {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    border-radius: 4px;
+}
+
+label[for=blue] .square {
+    background: var(--colors-square-blue);
+}
+
+label[for=beige] .square {
+    background: var(--colors-square-beige);
+}
+
+label[for=grey] .square {
+    background: var(--colors-square-grey);
+}
+
+.details-container .title,
+.howchoose-container .title {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 600;
+}
+
+.details-container .txt,
+.howchoose-container .txt {
+    margin-top: 4px;
 }
