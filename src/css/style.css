@@ -144,8 +144,7 @@ body {
 }
 
 .pricebtn-container .btn {
-    padding: 6px;
-    min-width: 184px;
+    padding: 6px 24px;
     background: var(--btn-bg-color-yellow);
     font-size: inherit;
     line-height: inherit;
@@ -173,6 +172,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-right: 16px;
 }
 
 .tvoibalans-container .title {
