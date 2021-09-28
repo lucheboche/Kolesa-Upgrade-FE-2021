@@ -5,13 +5,15 @@
     --second-color: #2a81dd;
     --btn-bg-color-yellow: #ffdd61;
     --balans-bg-color: #f0fafd;
-    --balans-title-color: #888b94;
+    --title-color-grey: #888b94;
     --radio-checked-bg-color: #d6ecfb;
     --colors-square-blue: #00458a;
     --colors-square-beige: #efe8d8;
     --colors-square-grey: #d4d4da;
     --border-shadow-color: rgba(28, 24, 25, 0.1);
     --none-color: rgba(0, 0, 0, 0);
+    --search-color: #f2f2f3;
+    --calc-width: calc(50vw - 720px);
 }
 
 * {
@@ -28,8 +30,150 @@ body {
     line-height: 24px;
     font-weight: 400;
     color: var(--main-color);
+    width: 100vw;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 104px auto 98px;
 }
 
+/* .main-container {
+    display: grid;
+    width: 1440px;
+    min-height: 100vh;
+    grid-template-rows: 104px auto 98px;
+} */
+
+img {
+    background-color: unset;
+}
+
+header {
+    width: 100%;
+    height: 100%;
+    padding: 34px var(--calc-width) 26px var(--calc-width);
+    display: grid;
+    grid-template-columns: 312px 308px auto;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-left: 32px;
+}
+
+header .logo .image {
+    cursor: pointer;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    background-color: var(--search-color);
+    border-radius: 8px;
+}
+
+.search .image {
+    padding: 10px 16px;
+}
+
+.search input {
+    background-color: var(--search-color);
+}
+
+.search input::placeholder {
+    color: var(--title-color-grey);
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.user {
+    display: flex;
+    justify-content: end;
+    padding-right: 90px;
+}
+
+.user .image {
+    border-radius: 50%;
+    margin: 0 16px;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.user-name {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 600;
+    color: var(--second-color);
+}
+
+.user-balance {
+    font-size: 13px;
+    line-height: 20px;
+}
+
+/* section/////////////////////////////////////////// */
+section {
+    width: 1440px;
+    display: flex;
+}
+
+/* footer//////////////////////////////////////// */
+footer {
+    width: 100%;
+    height: 100%;
+    padding: 0 var(--calc-width) 0 var(--calc-width);
+    display: grid;
+    grid-template-columns: 948px auto auto;
+    background-color: var(--main-color);
+}
+
+.social {
+    display: flex;
+    flex-direction: column;
+    padding-left: 32px;
+    align-self: center;
+    justify-content: space-around;
+}
+
+.social-kolesa {
+    font-size: 16px;
+    line-height: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+.social-other {
+    display: flex;
+    gap: 12px;
+    padding-top: 8px;
+}
+
+.social-other .image {
+    cursor: pointer;
+}
+
+.footer-text {
+    color: white;
+    align-self: center;
+}
+
+footer .btn {
+    width: 150px;
+    height: 36px;
+    margin: 0 40px;
+    color: var(--second-color);
+    background: white;
+    box-shadow: 0 2px 4px var(--border-shadow-color);
+    border-radius: 8px;
+    align-self: center;
+}
+
+/* modal//////////////////////////////// */
 .modal {
     display: flex;
     align-items: center;
@@ -179,7 +323,7 @@ body {
     font-size: 14px;
     line-height: 24px;
     font-weight: 400;
-    color: var(--balans-title-color);
+    color: var(--title-color-grey);
 }
 
 .tvoibalans-container .balance {
