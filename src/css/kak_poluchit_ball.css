@@ -70,4 +70,10 @@
     border-radius: 8px;
     background: var(--second-color);
     color: white;
+    transition: 0.1s box-shadow ease-in;
+    box-shadow: 0 2px 4px var(--border-shadow-color);
+}
+
+.conf-item .btn:active {
+    box-shadow: 0 2px 4px var(--none-color);
 }
