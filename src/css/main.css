@@ -204,6 +204,15 @@ nav li.bolds::before {
     font-size: 20px;
     line-height: 32px;
     justify-content: start;
+    transition: 0.1s box-shadow ease-in;
+}
+
+.bonus [class*='btn']:hover {
+    box-shadow: 0 2px 4px var(--border-shadow-color);
+}
+
+.bonus [class*='btn']:active {
+    box-shadow: 0 2px 4px var(--none-color);
 }
 
 .bonus .btn-1 {
@@ -225,6 +234,7 @@ nav li.bolds::before {
 
 .main-container .options {
     margin-bottom: 16px;
+    display: flex;
 }
 
 .main-container .tab {

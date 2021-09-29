@@ -1,8 +1,17 @@
 @import '/src/css/main.css';
 
 .path {
-    color: var(--second-color);
     margin-bottom: 24px;
+    color: var(--second-color);
+}
+
+.path a {
+    color: var(--second-color);
+    text-decoration: none;
+}
+
+.path a:hover {
+    text-decoration: underline;
 }
 
 .page-title {
