@@ -11,6 +11,7 @@ footer {
     flex-direction: column;
     padding: 20px 0 20px 32px;
     align-self: center;
+    align-items: start;
     justify-content: space-around;
 }
 
@@ -37,6 +38,7 @@ footer {
 }
 
 footer .btn {
+    position: relative;
     width: 150px;
     height: 36px;
     margin: 0 40px;
@@ -45,4 +47,16 @@ footer .btn {
     box-shadow: 0 2px 4px var(--border-shadow-color);
     border-radius: 8px;
     align-self: center;
+}
+
+footer .btn::before {
+    position: absolute;
+    content: '';
+    width: 150px;
+    height: 36px;
+    border: 1px solid var(--main-color);
+    z-index: 1;
+    opacity: 0.1;
+    border-radius: 8px;
+    box-sizing: border-box;
 }
