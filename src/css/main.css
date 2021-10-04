@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+@import '/src/css/main-header.css';
+@import '/src/css/main-section.css';
+@import '/src/css/main-footer.css';
+
+:root {
+    --main-color: #1c1819;
+    --second-color: #2a81dd;
+    --btn-bg-color-yellow: #ffdd61;
+    --balans-bg-color: #f0fafd;
+    --title-color-grey: #888b94;
+    --radio-checked-bg-color: #d6ecfb;
+    --colors-square-blue: #00458a;
+    --colors-square-beige: #efe8d8;
+    --colors-square-grey: #d4d4da;
+    --border-shadow-color: rgba(28, 24, 25, 0.1);
+    --none-color: rgba(0, 0, 0, 0);
+    --search-color: #f2f2f3;
+    --calc-width: calc(50vw - 720px);
+    --payed-blue: #e9f2fb;
+    --payed-green: #eff8eb;
+    --payed-yellow: #fffae7;
+    --green-bg-color: #64bd38;
+    --color-text-red: #f33;
+}
+
+* {
+    margin: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    color: var(--main-color);
+    width: 100vw;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 104px 1fr auto;
+    overflow-x: hidden;
+}
+
+img {
+    background-color: unset;
+    display: block;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: unset;
+    cursor: pointer;
+}
+
+input[type=radio] {
+    display: none;
+}
