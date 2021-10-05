@@ -1,0 +1,102 @@
+@import '../vars.scss';
+@import '../mixin.scss';
+
+.section {
+    padding: 0 $calc-width 0 $calc-width;
+    display: grid;
+    grid-template-columns: 312px auto;
+
+    &__nav {
+        padding-left: 32px;
+    }
+
+    &__main-container {
+        @include flexcol;
+
+        padding-right: 88px;
+    }
+
+    &__banner {
+        content: '';
+        width: 1040px;
+        height: 336px;
+        background-color: $payed-blue;
+        border-radius: 8px;
+        margin-bottom: 24px;
+    }
+
+    &__bonus {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+
+    &__bonus-image {
+        padding-left: 16px;
+        padding-right: 24px;
+    }
+
+    &__bonus-btn {
+        width: 330px;
+        height: 76px;
+        border-radius: 16px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 32px;
+        justify-content: start;
+        transition: 0.1s box-shadow ease-in;
+
+        &:hover {
+            box-shadow: $main-sh;
+        }
+
+        &:active {
+            box-shadow: 0 2px 4px $none-color;
+        }
+
+        &--green {
+            background: $payed-green;
+        }
+
+        &--yellow {
+            background: $payed-yellow;
+        }
+
+        &--blue {
+            background: $payed-blue;
+        }
+    }
+
+    &__options {
+        margin-bottom: 16px;
+        display: flex;
+    }
+
+    &__options-tab {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 36px;
+        height: 36px;
+        color: $second-color;
+        border: $main-box;
+        padding: 0 20px;
+        margin-right: 8px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    input[name=tab]:checked + &__options-tab {
+        color: $main-color;
+        background: $radio-checked-bg-color;
+        border: 1px solid $none-color;
+    }
+
+    &__cards {
+        margin-bottom: 192px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 330px);
+        gap: 24px;
+    }
+}

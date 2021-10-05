@@ -4,106 +4,117 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/src/assets/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/src/css/main.css">
-    <title>lesson3 главная с баннером</title>
+    <title>lesson5 SCSS & BEM</title>
   </head>
   <body>
-        <header>
-            <div class="big--logo">
-                <img class="image" src="/src/img/logo.svg" alt="logo" width="215" height="35">
+
+        <header class="header">
+            <div class="header__big-logo">
+                <img src="/src/img/logo.svg" alt="logo" width="215" height="35">
             </div>
-            <div class="search">
-                <button class="btn image">
+            <div class="header__search">
+                <button class="btn header__btn">
                     <img src="/src/img/search-big.svg" alt="search">
                 </button>
-                <input type="text" placeholder="Поиск">
+                <input class="header__input" type="text" placeholder="Поиск">
             </div>
-            <div class="user">
-                <button class="btn">
-                    <img class="image" src="/src/img/userpic.png" alt="userpic" width="44" height="44">
-                    <div class="user-info">
-                        <div class="user-name">
+            <div class="header__user">
+                <button class="btn header__user-btn">
+                    <img class="header__user-image" src="/src/img/userpic.png" alt="userpic" width="44" height="44">
+                    <div class="header__user-info">
+                        <div class="header__user-name">
                             Мортиджан
                         </div>
-                        <div class="user-balance">
+                        <div class="header__user-balance">
                             300 баллов
                         </div>
                     </div>
                 </button>
             </div>
         </header>
-        <section>
-            <nav>
+
+        <section class="section">
+            <nav class="nav section__nav">
                 <ul>
-                    <li><a href="#">Оргсхема</a></li>
-                    <li><a href="#">Kolesa Team</a></li>
-                    <li class="bolds"><a href="#">Kolesa Shop</a></li>
-                    <li><a href="#">Картина компании</a></li>
-                    <li><a href="#">Новости</a></li>
-                    <li><a href="#">Education</a></li>
-                    <li><a href="#">Guidelines</a></li>
-                    <li><a href="#">Библиотека</a></li>
-                    <li><a href="#">FAQ</a></li>
+                    <li class="nav__li"><a class="nav__a" href="#">Оргсхема</a></li>
+                    <li class="nav__li"><a class="nav__a" href="#">Kolesa Team</a></li>
+                    <li class="nav__li nav__li--bolds"><a class="nav__a" href="#">Kolesa Shop</a></li>
+                    <li class="nav__li"><a class="nav__a" href="#">Картина компании</a></li>
+                    <li class="nav__li"><a class="nav__a" href="#">Новости</a></li>
+                    <li class="nav__li"><a class="nav__a" href="#">Education</a></li>
+                    <li class="nav__li"><a class="nav__a" href="#">Guidelines</a></li>
+                    <li class="nav__li"><a class="nav__a" href="#">Библиотека</a></li>
+                    <li class="nav__li"><a class="nav__a" href="#">FAQ</a></li>
                 </ul>
             </nav>
-            <div class="main-container">
-                <div class="banner"></div>
-                <div class="bonus">
-                    <button class="btn--get-bonus btn">
-                        <img class="image" src="/src/img/plus-sign.svg" alt="plus-sign">
+
+            <div class="section__main-container">
+
+                <div class="section__banner"></div>
+
+                <div class="section__bonus">
+                    <button class="section__bonus-btn section__bonus-btn--green btn">
+                        <img class="section__bonus-image" src="/src/img/plus-sign.svg" alt="plus-sign">
                         Получить баллы
                     </button>
-                    <button class="btn--how-get btn">
-                        <img class="image" src="/src/img/question-sign.svg" alt="question-sign">
+                    <button class="section__bonus-btn section__bonus-btn--yellow btn">
+                        <img class="section__bonus-image" src="/src/img/question-sign.svg" alt="question-sign">
                         Как получить баллы
                     </button>
-                    <button class="btn--gift-bonus btn">
-                        <img class="image" src="/src/img/gift.png" alt="gift">
+                    <button class="section__bonus-btn section__bonus-btn--blue btn">
+                        <img class="section__bonus-image" src="/src/img/gift.png" alt="gift">
                         Подарить баллы
                     </button>
                 </div>
-                <div class="options">
+
+                <div class="section__options">
                     <label>
                         <input type="radio" name="tab" checked>
-                        <div class="tab">
+                        <div class="section__options-tab">
                             Все товары
                         </div>
                     </label>
                     <label>
                         <input type="radio" name="tab">
-                        <div class="tab">
+                        <div class="section__options-tab">
                             Одежда
                         </div>
                     </label>
                     <label>
                         <input type="radio" name="tab">
-                        <div class="tab">
+                        <div class="section__options-tab">
                             Аксессуары
                         </div>
                     </label>
                 </div>
-                <div class="cards">
+
+                <div class="cards section__cards">
                 </div>
+
             </div>
         </section>
-        <footer>
-            <div class="social">
-                <div class="social-kolesa">
+
+        <footer class="footer">
+
+            <div class="footer__social">
+                <div class="footer__social-kolesa">
                     © Kolesa Group
                 </div>
-                <div class="social-other">
-                    <img class="image" src="/src/img/Instagram.svg" alt="Instagram" width="24" height="24">
-                    <img class="image" src="/src/img/YouTube.svg" alt="YouTube" width="24" height="24">
-                    <img class="image" src="/src/img/VK.svg" alt="VK" width="24" height="24">
+                <div class="footer__social-other">
+                    <img class="footer__social-other--cursor" src="/src/img/Instagram.svg" alt="Instagram" width="24" height="24">
+                    <img class="footer__social-other--cursor" src="/src/img/YouTube.svg" alt="YouTube" width="24" height="24">
+                    <img class="footer__social-other--cursor" src="/src/img/VK.svg" alt="VK" width="24" height="24">
                 </div>
             </div>
-            <div class="footer-text">
+
+            <div class="footer__text">
                 Есть идеи что улучшить?<br>Не знаешь, с кем решить проблему?
             </div>
-            <button class="btn">
+
+            <button class="footer__btn btn">
                 Написать
             </button>
         </footer>
-        <script src="/src/js/main.js"></script>
+        <script type="module" src="/src/js/main.js"></script>
   </body>
 </html>
