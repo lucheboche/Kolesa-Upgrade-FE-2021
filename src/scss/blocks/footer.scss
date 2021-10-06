@@ -44,7 +44,9 @@
         margin: 0 40px;
         color: $second-color;
         background: white;
-        box-shadow: $main-sh;
+
+        @include boxsh;
+
         border: $main-box;
         border-radius: 8px;
         align-self: center;

@@ -80,7 +80,9 @@
         height: 518px;
         border-radius: 8px;
         background: white;
-        box-shadow: $main-sh;
+
+        @include boxsh;
+
         z-index: 0;
     }
 

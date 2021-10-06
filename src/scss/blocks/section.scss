@@ -47,11 +47,11 @@
         transition: 0.1s box-shadow ease-in;
 
         &:hover {
-            box-shadow: $main-sh;
+            @include boxsh;
         }
 
         &:active {
-            box-shadow: 0 2px 4px $none-color;
+            @include boxsh($none-color);
         }
 
         &--green {
