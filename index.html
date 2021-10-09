@@ -8,15 +8,170 @@
   </head>
   <body>
 
+    <div class="modal">
+        <div class="modal__modal-box">
+            <button class="modal-box__close js-close">
+                <img
+                src="/src/img/close-big.svg"
+                alt="close"
+                width="32"
+                height="32"
+                >
+            </button>
+            <div class="modal-box__foto-side modal-foto-side">
+                <img
+                src="/src/img/image 7.png"
+                alt="Большая футболка"
+                width="330"
+                height="330"
+                >
+                <div class="modal-foto-side__preview">
+                    <label class="modal-foto-side__lbl">
+                        <input class="input-radio" type="radio" name="preview">
+                        <div class="modal-foto-side__preview-image">
+                            <img
+                            src="/src/img/small1.png"
+                            alt="Превью1"
+                            width="50"
+                            height="50"
+                            >
+                        </div>
+                    </label>
+                    <label class="modal-foto-side__lbl">
+                        <input class="input-radio" type="radio" name="preview" checked>
+                        <div class="modal-foto-side__preview-image">
+                            <img
+                            src="/src/img/small2.png"
+                            alt="Превью2"
+                            width="50"
+                            height="50"
+                            >
+                        </div>
+                    </label>
+                    <label class="modal-foto-side__lbl">
+                        <input class="input-radio" type="radio" name="preview">
+                        <div class="modal-foto-side__preview-image">
+                            <img
+                            src="/src/img/small3.png"
+                            alt="Превью3"
+                            width="50"
+                            height="50"
+                            >
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <div class="modal-box__txt-side modal-txt-side">
+                <div class="modal-txt-side__title">
+                    Футболка "Эволюционируй или сдохни"
+                </div>
+                <div class="modal-txt-side__price-box">
+                    <div class="price-box__pricebtn">
+                        <div class="price-box__price">
+                            100 баллов
+                        </div>
+                        <button class="price-box__btn btn">
+                            Попросить 50 баллов
+                        </button>
+                    </div>
+                    <div class="price-box__balance-box">
+                        <div class="price-box__tvoibalans-box">
+                            <div class="price-box__balance-title">
+                                Твой баланс:
+                            </div>
+                            <div class="price-box__balance">
+                                50 баллов
+                            </div>
+                        </div>
+                        <img src="/src/img/balans_icon.png" alt="Bags" class="image">
+                    </div>
+                </div>
+                <div class="modal-txt-side__colors">
+                    <div class="modal-txt-side__subtitle--md8">
+                        Цвета:
+                    </div>
+                    <div class="options">
+                        <label class="options__box">
+                            <input class="input-radio" type="radio" name="color" checked>
+                            <div class="options__tab options__tab--pr12">
+                                <div class="options__square options__square--blue-color"></div>
+                                Синий
+                            </div>
+                        </label>
+                        <label class="options__box">
+                            <input class="input-radio" type="radio" name="color" >
+                            <div class="options__tab options__tab--pr12">
+                                <div class="options__square options__square--beige-color"></div>
+                                Бежевый
+                            </div>
+                        </label>
+                        <label class="options__box">
+                            <input class="input-radio" type="radio" name="color" >
+                            <div class="options__tab options__tab--pr12">
+                                <div class="options__square options__square--grey-color"></div>
+                                Серый
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="modal-txt-side__sizes">
+                    <div class="modal-txt-side__subtitle--md8">
+                        Размер:
+                    </div>
+                    <div class="options">
+                        <label class="options__box">
+                            <input class="input-radio" type="radio" name="size" checked>
+                            <div class="options__tab">
+                                S
+                            </div>
+                        </label>
+                        <label class="options__box">
+                            <input class="input-radio" type="radio" name="size">
+                            <div class="options__tab">
+                                M
+                            </div>
+                        </label>
+                        <label class="options__box">
+                            <input class="input-radio" type="radio" name="size">
+                            <div class="options__tab">
+                                L
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <div class="modal-txt-side__details">
+                    <div class="modal-txt-side__subtitle--bold">
+                        Детали:
+                    </div>
+                    <div class="modal-txt-side__txt">
+                        Брендированная толстовка от Qazaq Republic. Материал: Хлопок 80%, Вискоза 20%
+                    </div>
+                </div>
+                <div class="modal-txt-side__howchoose">
+                    <div class="modal-txt-side__subtitle--bold">
+                        Как выбрать размер:
+                    </div>
+                    <div class="modal-txt-side__txt">
+                        Написать дяде Рику для уточнения.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
         <header class="header">
             <div class="header__big-logo">
-                <img src="/src/img/logo.svg" alt="logo" width="215" height="35">
+                <a href="#" class="header__big-logo-link">
+                    <img src="/src/img/logo.svg" alt="logo" width="215" height="35">
+                </a>
             </div>
             <div class="header__search">
-                <button class="btn header__btn">
+                <button class="btn header__search-btn">
                     <img src="/src/img/search-big.svg" alt="search">
                 </button>
-                <input class="header__input" type="text" placeholder="Поиск">
+                <input class="header__search-input" type="text" placeholder="Поиск">
             </div>
             <div class="header__user">
                 <button class="btn header__user-btn">
@@ -34,61 +189,61 @@
         </header>
 
         <section class="section">
-            <nav class="nav section__nav">
-                <ul>
-                    <li class="nav__li"><a class="nav__a" href="#">Оргсхема</a></li>
-                    <li class="nav__li"><a class="nav__a" href="#">Kolesa Team</a></li>
-                    <li class="nav__li nav__li--bolds"><a class="nav__a" href="#">Kolesa Shop</a></li>
-                    <li class="nav__li"><a class="nav__a" href="#">Картина компании</a></li>
-                    <li class="nav__li"><a class="nav__a" href="#">Новости</a></li>
-                    <li class="nav__li"><a class="nav__a" href="#">Education</a></li>
-                    <li class="nav__li"><a class="nav__a" href="#">Guidelines</a></li>
-                    <li class="nav__li"><a class="nav__a" href="#">Библиотека</a></li>
-                    <li class="nav__li"><a class="nav__a" href="#">FAQ</a></li>
+            <nav class="menu section__menu">
+                <ul class="menu__link-box">
+                    <li class="menu__link-item"><a class="menu__link" href="#">Оргсхема</a></li>
+                    <li class="menu__link-item"><a class="menu__link" href="#">Kolesa Team</a></li>
+                    <li class="menu__link-item menu__link-item--bolds"><a class="menu__link" href="#">Kolesa Shop</a></li>
+                    <li class="menu__link-item"><a class="menu__link" href="#">Картина компании</a></li>
+                    <li class="menu__link-item"><a class="menu__link" href="#">Новости</a></li>
+                    <li class="menu__link-item"><a class="menu__link" href="#">Education</a></li>
+                    <li class="menu__link-item"><a class="menu__link" href="#">Guidelines</a></li>
+                    <li class="menu__link-item"><a class="menu__link" href="#">Библиотека</a></li>
+                    <li class="menu__link-item"><a class="menu__link" href="#">FAQ</a></li>
                 </ul>
             </nav>
 
-            <div class="section__main-container">
+            <div class="section__content content">
 
-                <div class="section__banner"></div>
+                <div class="content__banner"></div>
 
-                <div class="section__bonus">
-                    <button class="section__bonus-btn section__bonus-btn--green btn">
-                        <img class="section__bonus-image" src="/src/img/plus-sign.svg" alt="plus-sign">
+                <div class="content__bonus bonus">
+                    <button class="bonus__btn bonus__btn--green btn">
+                        <img class="bonus__image" src="/src/img/plus-sign.svg" alt="plus-sign">
                         Получить баллы
                     </button>
-                    <button class="section__bonus-btn section__bonus-btn--yellow btn">
-                        <img class="section__bonus-image" src="/src/img/question-sign.svg" alt="question-sign">
+                    <button class="bonus__btn bonus__btn--yellow btn">
+                        <img class="bonus__image" src="/src/img/question-sign.svg" alt="question-sign">
                         Как получить баллы
                     </button>
-                    <button class="section__bonus-btn section__bonus-btn--blue btn">
-                        <img class="section__bonus-image" src="/src/img/gift.png" alt="gift">
+                    <button class="bonus__btn bonus__btn--blue btn">
+                        <img class="bonus__image" src="/src/img/gift.png" alt="gift">
                         Подарить баллы
                     </button>
                 </div>
 
-                <div class="section__options">
-                    <label>
-                        <input type="radio" name="tab" checked>
-                        <div class="section__options-tab">
+                <div class="content__options options">
+                    <label class="options__box">
+                        <input class="input-radio" type="radio" name="tab" checked>
+                        <div class="options__tab options__tab--p20">
                             Все товары
                         </div>
                     </label>
-                    <label>
-                        <input type="radio" name="tab">
-                        <div class="section__options-tab">
+                    <label class="options__box">
+                        <input class="input-radio" type="radio" name="tab">
+                        <div class="options__tab options__tab--p20">
                             Одежда
                         </div>
                     </label>
-                    <label>
-                        <input type="radio" name="tab">
-                        <div class="section__options-tab">
+                    <label class="options__box">
+                        <input class="input-radio" type="radio" name="tab">
+                        <div class="options__tab options__tab--p20">
                             Аксессуары
                         </div>
                     </label>
                 </div>
 
-                <div class="cards section__cards">
+                <div class="cards content__cards">
                 </div>
 
             </div>
@@ -98,12 +253,18 @@
 
             <div class="footer__social">
                 <div class="footer__social-kolesa">
-                    © Kolesa Group
+                    <a class="footer__social-link" href="#">© Kolesa Group</a>
                 </div>
                 <div class="footer__social-other">
-                    <img class="footer__social-other--cursor" src="/src/img/Instagram.svg" alt="Instagram" width="24" height="24">
-                    <img class="footer__social-other--cursor" src="/src/img/YouTube.svg" alt="YouTube" width="24" height="24">
-                    <img class="footer__social-other--cursor" src="/src/img/VK.svg" alt="VK" width="24" height="24">
+                    <a class="footer__social-link" href="#">
+                        <img src="/src/img/Instagram.svg" alt="Instagram" width="24" height="24">
+                    </a>
+                    <a class="footer__social-link" href="#">
+                        <img src="/src/img/YouTube.svg" alt="YouTube" width="24" height="24">
+                    </a>
+                    <a class="footer__social-link" href="#">
+                        <img src="/src/img/VK.svg" alt="VK" width="24" height="24">
+                    </a>
                 </div>
             </div>
 

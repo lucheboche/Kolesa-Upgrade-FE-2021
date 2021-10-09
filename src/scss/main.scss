@@ -4,9 +4,8 @@
 @import './blocks/btm.scss';
 @import './blocks/header.scss';
 @import './blocks/section.scss';
-@import './blocks/nav.scss';
-@import './blocks/cards-item.scss';
 @import './blocks/footer.scss';
+@import './blocks/modal.scss';
 
 *,
 *::before {
@@ -35,6 +34,6 @@ img {
     display: block;
 }
 
-input[type=radio] {
+.input-radio {
     display: none;
 }

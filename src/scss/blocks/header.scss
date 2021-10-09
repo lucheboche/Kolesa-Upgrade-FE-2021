@@ -13,7 +13,6 @@
         align-items: center;
         justify-content: start;
         padding-left: 32px;
-        cursor: pointer;
     }
 
     &__search {
@@ -22,7 +21,7 @@
         position: relative;
     }
 
-    &__btn {
+    &__search-btn {
         position: relative;
         padding: 0 16px;
         z-index: 1;
@@ -33,7 +32,7 @@
         }
     }
 
-    &__input {
+    &__search-input {
         position: absolute;
         top: 0;
         left: 0;

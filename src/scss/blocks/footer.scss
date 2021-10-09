@@ -18,19 +18,17 @@
 
     &__social-kolesa {
         font-size: 16px;
-        line-height: 24px;
-        color: white;
-        cursor: pointer;
         margin-bottom: 8px;
+    }
+
+    &__social-link {
+        color: white;
+        text-decoration: none;
     }
 
     &__social-other {
         display: flex;
         gap: 12px;
-
-        &--cursor {
-            cursor: pointer;
-        }
     }
 
     &__text {

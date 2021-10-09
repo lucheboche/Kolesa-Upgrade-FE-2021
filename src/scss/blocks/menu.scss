@@ -1,12 +1,11 @@
 @import '../vars.scss';
 @import '../mixin.scss';
 
-.nav {
-    &__li {
+.menu {
+    &__link-item {
         position: relative;
         list-style: none;
         font-size: 16px;
-        line-height: 24px;
         padding-bottom: 24px;
 
         &--bolds {
@@ -25,7 +24,7 @@
         }
     }
 
-    &__a {
+    &__link {
         color: $main-color;
         text-decoration: none;
 
