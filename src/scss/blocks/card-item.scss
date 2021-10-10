@@ -74,16 +74,29 @@
     }
 
     &:hover::before {
+        @include boxsh;
+
         position: absolute;
+        top: 0;
+        left: 0;
         content: '';
         width: 330px;
         height: 518px;
         border-radius: 8px;
         background: white;
-
-        @include boxsh;
-
         z-index: 0;
+    }
+
+    &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        width: 330px;
+        height: 518px;
+        border-radius: 8px;
+        background: $none-color;
+        z-index: 5;
     }
 
     &:hover &__price {
