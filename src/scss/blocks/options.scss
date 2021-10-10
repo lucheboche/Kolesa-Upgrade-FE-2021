@@ -16,12 +16,17 @@
         border-radius: 8px;
         cursor: pointer;
 
-        &--p20 {
+        &--main {
             padding: 0 20px;
         }
 
-        &--pr12 {
+        &--colors {
             padding-right: 12px;
+        }
+
+        &--sizes {
+            padding: 0 16px;
+            text-transform: uppercase;
         }
     }
 
@@ -48,5 +53,9 @@
         &--grey-color {
             background: $colors-square-grey;
         }
+    }
+
+    &__title {
+        margin-bottom: 8px;
     }
 }

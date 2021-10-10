@@ -164,28 +164,28 @@ const buildModal = function (param) {
                         <img src="/src/img/balans_icon.png" alt="Bags" class="image">
                     </div>
                 </div>
-                <div class="modal-txt-side__colors">
-                    <div class="modal-txt-side__subtitle--md8">
+                <div class="modal-colors">
+                    <div class="options__title">
                         Цвета:
                     </div>
                     <div class="options">
                         <label class="options__box">
                             <input class="input-radio" type="radio" name="color" checked>
-                            <div class="options__tab options__tab--pr12">
+                            <div class="options__tab options__tab--colors">
                                 <div class="options__square options__square--blue-color"></div>
                                 Синий
                             </div>
                         </label>
                         <label class="options__box">
                             <input class="input-radio" type="radio" name="color" >
-                            <div class="options__tab options__tab--pr12">
+                            <div class="options__tab options__tab--colors">
                                 <div class="options__square options__square--beige-color"></div>
                                 Бежевый
                             </div>
                         </label>
                         <label class="options__box">
                             <input class="input-radio" type="radio" name="color" >
-                            <div class="options__tab options__tab--pr12">
+                            <div class="options__tab options__tab--colors">
                                 <div class="options__square options__square--grey-color"></div>
                                 Серый
                             </div>
@@ -193,27 +193,27 @@ const buildModal = function (param) {
                     </div>
                 </div>
 
-                <div class="modal-txt-side__sizes">
-                    <div class="modal-txt-side__subtitle--md8">
+                <div class="modal-sizes">
+                    <div class="options__title">
                         Размер:
                     </div>
                     <div class="options">
                         <label class="options__box">
                             <input class="input-radio" type="radio" name="size" checked>
-                            <div class="options__tab">
-                                S
+                            <div class="options__tab options__tab--sizes">
+                                s
                             </div>
                         </label>
                         <label class="options__box">
                             <input class="input-radio" type="radio" name="size">
-                            <div class="options__tab">
-                                M
+                            <div class="options__tab options__tab--sizes">
+                                m
                             </div>
                         </label>
                         <label class="options__box">
                             <input class="input-radio" type="radio" name="size">
-                            <div class="options__tab">
-                                L
+                            <div class="options__tab options__tab--sizes">
+                                l
                             </div>
                         </label>
                     </div>
