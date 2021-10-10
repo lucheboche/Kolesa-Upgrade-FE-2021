@@ -13,22 +13,6 @@
     }
 
     &__price-box {
-        display: flex;
-        justify-content: space-between;
         margin-top: -8px;
-    }
-
-    &__subtitle {
-        &--bold {
-            font-weight: 600;
-        }
-
-        &--md8 {
-            margin-bottom: 8px;
-        }
-    }
-
-    &__txt {
-        margin-top: 4px;
     }
 }

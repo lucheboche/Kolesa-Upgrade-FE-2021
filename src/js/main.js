@@ -143,7 +143,7 @@ const buildModal = function (param) {
                 <div class="modal-txt-side__title">
                     ${el.titleItem}
                 </div>
-                <div class="modal-txt-side__price-box">
+                <div class="modal-txt-side__price-box price-box">
                     <div class="price-box__pricebtn">
                         <div class="price-box__price">
                         ${el.priceItem} баллов
@@ -218,19 +218,19 @@ const buildModal = function (param) {
                         </label>
                     </div>
                 </div>
-                <div class="modal-txt-side__details">
-                    <div class="modal-txt-side__subtitle--bold">
+                <div class="description">
+                    <div class="description__title">
                         Детали:
                     </div>
-                    <div class="modal-txt-side__txt">
+                    <div class="description__txt">
                         Брендированная толстовка от Qazaq Republic. Материал: Хлопок 80%, Вискоза 20%
                     </div>
                 </div>
-                <div class="modal-txt-side__howchoose">
-                    <div class="modal-txt-side__subtitle--bold">
+                <div class="description">
+                    <div class="description__title">
                         Как выбрать размер:
                     </div>
-                    <div class="modal-txt-side__txt">
+                    <div class="description__txt">
                         Написать дяде Рику для уточнения.
                     </div>
                 </div>
