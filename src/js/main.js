@@ -1,5 +1,6 @@
 import '../scss/main.scss';
 
+let innerHtmlText = '';
 const divCards = document.querySelector('.cards');
 const cardsMassive = [
     {
@@ -53,8 +54,6 @@ const cardsMassive = [
         sizesItem: 'Размеры S/M/L',
     },
 ];
-
-let innerHtmlText = '';
 
 const buildCardsInnerHTML = function (el) {
     innerHtmlText += `
@@ -277,8 +276,6 @@ const removeModal = () => {
     document.querySelector('.modal').remove();
     document.body.style.overflowY = 'visible';
 };
-
-removeModal();
 
 document.querySelectorAll('.js-tab')
     .forEach(tab => tab.addEventListener('change', event => buildCardsTag(event)));
