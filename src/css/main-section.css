@@ -165,9 +165,7 @@ input[name=tab]:checked + .tab {
 }
 
 .title-item {
-    padding-top: 8px;
-    padding-left: 16px;
-    padding-right: 24px;
+    padding: 8px 24px 0 16px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;

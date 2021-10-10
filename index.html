@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/src/assets/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/src/css/style.css">
-    <title>lesson2</title>
+    <title>lesson5 SCSS & BEM</title>
   </head>
   <body>
+
     <div class="modal">
-        <div class="container">
-            <button class="btn close">
+        <div class="modal__modal-box">
+            <button class="modal-box__close js-close">
                 <img
                 src="/src/img/close-big.svg"
                 alt="close"
@@ -18,17 +18,17 @@
                 height="32"
                 >
             </button>
-            <div class="fotocontainer">
+            <div class="modal-box__foto-side modal-foto-side">
                 <img
                 src="/src/img/image 7.png"
                 alt="Большая футболка"
                 width="330"
                 height="330"
                 >
-                <div class="preview-container">
-                    <label>
-                        <input type="radio" name="preview">
-                        <div class="small">
+                <div class="modal-foto-side__preview">
+                    <label class="modal-foto-side__lbl">
+                        <input class="input-radio" type="radio" name="preview">
+                        <div class="modal-foto-side__preview-image">
                             <img
                             src="/src/img/small1.png"
                             alt="Превью1"
@@ -37,9 +37,9 @@
                             >
                         </div>
                     </label>
-                    <label>
-                        <input type="radio" name="preview" checked>
-                        <div class="small">
+                    <label class="modal-foto-side__lbl">
+                        <input class="input-radio" type="radio" name="preview" checked>
+                        <div class="modal-foto-side__preview-image">
                             <img
                             src="/src/img/small2.png"
                             alt="Превью2"
@@ -48,9 +48,9 @@
                             >
                         </div>
                     </label>
-                    <label>
-                        <input type="radio" name="preview">
-                        <div class="small">
+                    <label class="modal-foto-side__lbl">
+                        <input class="input-radio" type="radio" name="preview">
+                        <div class="modal-foto-side__preview-image">
                             <img
                             src="/src/img/small3.png"
                             alt="Превью3"
@@ -61,105 +61,221 @@
                     </label>
                 </div>
             </div>
-            <div class="description">
-                <h3 class="title">
+
+            <div class="modal-box__txt-side modal-txt-side">
+                <div class="modal-txt-side__title">
                     Футболка "Эволюционируй или сдохни"
-                </h3>
-                <div class="price-container">
-                    <div class="pricebtn-container">
-                        <div class="price">
+                </div>
+                <div class="modal-txt-side__price-box">
+                    <div class="price-box__pricebtn">
+                        <div class="price-box__price">
                             100 баллов
                         </div>
-                        <button class="btn">
+                        <button class="price-box__btn btn">
                             Попросить 50 баллов
                         </button>
                     </div>
-                    <div class="balance-container">
-                        <div class="tvoibalans-container">
-                            <h3 class="title">
+                    <div class="price-box__balance-box">
+                        <div class="price-box__tvoibalans-box">
+                            <div class="price-box__balance-title">
                                 Твой баланс:
-                            </h3>
-                            <div class="balance">
+                            </div>
+                            <div class="price-box__balance">
                                 50 баллов
                             </div>
                         </div>
                         <img src="/src/img/balans_icon.png" alt="Bags" class="image">
                     </div>
                 </div>
-                <form>
-                    <div class="colors-container">
-                        <h3 class="title">
-                            Цвета:
-                        </h3>
-                        <div class="options">
-                            <input type="radio" id="blue" name="color" value="blue" checked>
-                            <label for="blue" class="label">
-                                <div class="color">
-                                    <div class="square"></div>
-                                    Синий
-                                </div>
-                            </label>
-                            <input type="radio" id="beige" name="color" value="beige">
-                            <label for="beige" class="label">
-                                <div class="color">
-                                    <div class="square"></div>
-                                    Бежевый
-                                </div>
-                            </label>
-                            <input type="radio" id="grey" name="color" value="grey">
-                            <label for="grey" class="label">
-                                <div class="color">
-                                    <div class="square"></div>
-                                    Серый
-                                </div>
-                            </label>
-                        </div>
+                <div class="modal-txt-side__colors">
+                    <div class="modal-txt-side__subtitle--md8">
+                        Цвета:
                     </div>
-                    <div class="sizes-container">
-                        <h3 class="title">
-                            Размер:
-                        </h3>
-                        <div class="options">
-                            <input type="radio" id="s" name="size" value="s" checked>
-                            <label for="s" class="label">
-                                <div class="size">
-                                    S
-                                </div>
-                            </label>
-                            <input type="radio" id="m" name="size" value="m">
-                            <label for="m" class="label">
-                                <div class="size">
-                                    M
-                                </div>
-                            </label>
-                            <input type="radio" id="l" name="size" value="l">
-                            <label for="l" class="label">
-                                <div class="size">
-                                    L
-                                </div>
-                            </label>
-                        </div>
+                    <div class="options">
+                        <label class="options__box">
+                            <input class="input-radio" type="radio" name="color" checked>
+                            <div class="options__tab options__tab--pr12">
+                                <div class="options__square options__square--blue-color"></div>
+                                Синий
+                            </div>
+                        </label>
+                        <label class="options__box">
+                            <input class="input-radio" type="radio" name="color" >
+                            <div class="options__tab options__tab--pr12">
+                                <div class="options__square options__square--beige-color"></div>
+                                Бежевый
+                            </div>
+                        </label>
+                        <label class="options__box">
+                            <input class="input-radio" type="radio" name="color" >
+                            <div class="options__tab options__tab--pr12">
+                                <div class="options__square options__square--grey-color"></div>
+                                Серый
+                            </div>
+                        </label>
                     </div>
-                </form>
-                <div class="details-container">
-                    <h3 class="title">
+                </div>
+
+                <div class="modal-txt-side__sizes">
+                    <div class="modal-txt-side__subtitle--md8">
+                        Размер:
+                    </div>
+                    <div class="options">
+                        <label class="options__box">
+                            <input class="input-radio" type="radio" name="size" checked>
+                            <div class="options__tab">
+                                S
+                            </div>
+                        </label>
+                        <label class="options__box">
+                            <input class="input-radio" type="radio" name="size">
+                            <div class="options__tab">
+                                M
+                            </div>
+                        </label>
+                        <label class="options__box">
+                            <input class="input-radio" type="radio" name="size">
+                            <div class="options__tab">
+                                L
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <div class="modal-txt-side__details">
+                    <div class="modal-txt-side__subtitle--bold">
                         Детали:
-                    </h3>
-                    <div class="txt">
+                    </div>
+                    <div class="modal-txt-side__txt">
                         Брендированная толстовка от Qazaq Republic. Материал: Хлопок 80%, Вискоза 20%
                     </div>
                 </div>
-                <div class="howchoose-container">
-                    <h3 class="title">
+                <div class="modal-txt-side__howchoose">
+                    <div class="modal-txt-side__subtitle--bold">
                         Как выбрать размер:
-                    </h3>
-                    <div class="txt">
+                    </div>
+                    <div class="modal-txt-side__txt">
                         Написать дяде Рику для уточнения.
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script type="module" src="/src/js/main.js"></script>
+
+        <header class="header">
+            <div class="header__big-logo">
+                <a href="#" class="header__big-logo-link">
+                    <img src="/src/img/logo.svg" alt="logo" width="215" height="35">
+                </a>
+            </div>
+            <div class="header__search">
+                <button class="btn header__search-btn">
+                    <img src="/src/img/search-big.svg" alt="search">
+                </button>
+                <input class="header__search-input" type="text" placeholder="Поиск">
+            </div>
+            <div class="header__user">
+                <button class="btn header__user-btn">
+                    <img class="header__user-image" src="/src/img/userpic.png" alt="userpic" width="44" height="44">
+                    <div class="header__user-info">
+                        <div class="header__user-name">
+                            Мортиджан
+                        </div>
+                        <div class="header__user-balance">
+                            300 баллов
+                        </div>
+                    </div>
+                </button>
+            </div>
+        </header>
+
+        <section class="section">
+            <nav class="menu section__menu">
+                <ul class="menu__link-box">
+                    <li class="menu__link-item"><a class="menu__link" href="#">Оргсхема</a></li>
+                    <li class="menu__link-item"><a class="menu__link" href="#">Kolesa Team</a></li>
+                    <li class="menu__link-item menu__link-item--bolds"><a class="menu__link" href="#">Kolesa Shop</a></li>
+                    <li class="menu__link-item"><a class="menu__link" href="#">Картина компании</a></li>
+                    <li class="menu__link-item"><a class="menu__link" href="#">Новости</a></li>
+                    <li class="menu__link-item"><a class="menu__link" href="#">Education</a></li>
+                    <li class="menu__link-item"><a class="menu__link" href="#">Guidelines</a></li>
+                    <li class="menu__link-item"><a class="menu__link" href="#">Библиотека</a></li>
+                    <li class="menu__link-item"><a class="menu__link" href="#">FAQ</a></li>
+                </ul>
+            </nav>
+
+            <div class="section__content content">
+
+                <div class="content__banner"></div>
+
+                <div class="content__bonus bonus">
+                    <button class="bonus__btn bonus__btn--green btn">
+                        <img class="bonus__image" src="/src/img/plus-sign.svg" alt="plus-sign">
+                        Получить баллы
+                    </button>
+                    <button class="bonus__btn bonus__btn--yellow btn">
+                        <img class="bonus__image" src="/src/img/question-sign.svg" alt="question-sign">
+                        Как получить баллы
+                    </button>
+                    <button class="bonus__btn bonus__btn--blue btn">
+                        <img class="bonus__image" src="/src/img/gift.png" alt="gift">
+                        Подарить баллы
+                    </button>
+                </div>
+
+                <div class="content__options options">
+                    <label class="options__box">
+                        <input class="input-radio" type="radio" name="tab" checked>
+                        <div class="options__tab options__tab--p20">
+                            Все товары
+                        </div>
+                    </label>
+                    <label class="options__box">
+                        <input class="input-radio" type="radio" name="tab">
+                        <div class="options__tab options__tab--p20">
+                            Одежда
+                        </div>
+                    </label>
+                    <label class="options__box">
+                        <input class="input-radio" type="radio" name="tab">
+                        <div class="options__tab options__tab--p20">
+                            Аксессуары
+                        </div>
+                    </label>
+                </div>
+
+                <div class="cards content__cards">
+                </div>
+
+            </div>
+        </section>
+
+        <footer class="footer">
+
+            <div class="footer__social">
+                <div class="footer__social-kolesa">
+                    <a class="footer__social-link" href="#">© Kolesa Group</a>
+                </div>
+                <div class="footer__social-other">
+                    <a class="footer__social-link" href="#">
+                        <img src="/src/img/Instagram.svg" alt="Instagram" width="24" height="24">
+                    </a>
+                    <a class="footer__social-link" href="#">
+                        <img src="/src/img/YouTube.svg" alt="YouTube" width="24" height="24">
+                    </a>
+                    <a class="footer__social-link" href="#">
+                        <img src="/src/img/VK.svg" alt="VK" width="24" height="24">
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer__text">
+                Есть идеи что улучшить?<br>Не знаешь, с кем решить проблему?
+            </div>
+
+            <button class="footer__btn btn">
+                Написать
+            </button>
+        </footer>
+        <script type="module" src="/src/js/main.js"></script>
   </body>
 </html>

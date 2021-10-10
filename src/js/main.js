@@ -1,3 +1,5 @@
+import '../scss/main.scss';
+
 const divCards = document.querySelector('.cards');
 const cardsMassive = [
     {
@@ -46,23 +48,23 @@ let innerHtmlText = '';
 
 cardsMassive.forEach((el) => {
     innerHtmlText += `
-<div class="item">
-<div class="image">
+<div class="card-item">
+<div class="card-item__image">
     <img src="${el.fotoUrl}" alt="${el.fotoAlt}" width="330" height="330">
-    ${el.newItem ? `<div class="stick">
+    ${el.newItem ? `<div class="card-item__stick">
         new
     </div>` : ''}
 </div>
-<div class="price-item">
+<div class="card-item__price">
     ${el.priceItem} баллов
 </div>
-<div class="title-item">
+<div class="card-item__title">
 ${el.titleItem}
 </div>
-<div class="sizes-item">
+<div class="card-item__sizes">
 ${el.sizesItem}
 </div>
-<button class="btn">
+<button class="btn card-item__btn">
     Заказать
 </button>
 </div>

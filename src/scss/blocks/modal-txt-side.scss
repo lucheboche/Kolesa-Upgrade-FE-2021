@@ -1,0 +1,34 @@
+@import '../vars.scss';
+@import '../mixin.scss';
+@import './modal-price-box.scss';
+
+.modal-txt-side {
+    @include flexcol;
+
+    width: 574px;
+    gap: 24px;
+
+    &__title {
+        @include font20;
+    }
+
+    &__price-box {
+        display: flex;
+        justify-content: space-between;
+        margin-top: -8px;
+    }
+
+    &__subtitle {
+        &--bold {
+            font-weight: 600;
+        }
+
+        &--md8 {
+            margin-bottom: 8px;
+        }
+    }
+
+    &__txt {
+        margin-top: 4px;
+    }
+}

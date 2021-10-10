@@ -1,0 +1,25 @@
+@import '../vars.scss';
+@import '../mixin.scss';
+@import './modal-foto-side.scss';
+@import './modal-txt-side.scss';
+
+.modal-box {
+    &__close {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 24px;
+        right: 24px;
+        background-color: unset;
+        cursor: pointer;
+    }
+
+    &__foto-side {
+        margin-right: 24px;
+    }
+
+    &__txt-side {
+        margin: 8px 0;
+    }
+}
