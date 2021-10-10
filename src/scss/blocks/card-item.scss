@@ -87,7 +87,7 @@
         z-index: 0;
     }
 
-    &::after {
+    &:hover::after {
         position: absolute;
         top: 0;
         left: 0;
