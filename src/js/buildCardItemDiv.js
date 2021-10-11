@@ -17,7 +17,7 @@ const buildCardItemDiv = function (el) {
     </div>
 
     <div class="card-item__sizes">
-            Размеры: ${buildSizesInCard(el.sizes)}
+            ${buildSizesInCard(el.sizes)}
         </div>
 <button class="btn card-item__btn">
 Заказать

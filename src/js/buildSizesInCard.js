@@ -1,6 +1,6 @@
 const buildSizesInCard = function (el) {
     if (el.length > 0) {
-        let html = '<span style="text-transform: uppercase;">';
+        let html = 'Размеры: <span style="text-transform: uppercase;">';
 
         el.forEach((c, i) => {
             html += `${i < 1 ? '' : '/'}${c}`;

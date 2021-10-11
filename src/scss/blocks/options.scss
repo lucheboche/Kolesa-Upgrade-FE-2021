@@ -4,6 +4,7 @@
 .options {
     display: flex;
     gap: 8px;
+    flex-wrap: wrap;
 
     &__tab {
         display: flex;
