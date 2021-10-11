@@ -7,7 +7,16 @@ const cardsMassive = [
         newItem:   true,
         priceItem: 220,
         titleItem: 'Футболка "Эволюционируй или Эволюционируй или"',
-        sizesItem: 'Размеры S/M/L',
+        colors:    [
+            { modName: 'blue', txt: 'синий' },
+            { modName: 'beige', txt: 'бежевый' },
+            { modName: 'grey', txt: 'серый' },
+        ],
+        sizes:       ['s', 'm', 'l'],
+        description: [
+            { title: 'Детали:', txt: 'Брендированная толстовка от Qazaq Republic. Материал: Хлопок 80%, Вискоза 20%' },
+            { title: 'Как выбрать размер:', txt: 'Написать дяде Рику для уточнения.' },
+        ],
     },
     {
         idItem:    20,
@@ -17,7 +26,16 @@ const cardsMassive = [
         newItem:   false,
         priceItem: 110,
         titleItem: 'Футболка "Эволюционируй или Эволюционируй или"',
-        sizesItem: 'Размеры S/M/L',
+        colors:    [
+            { modName: 'blue', txt: 'синий' },
+            { modName: 'beige', txt: 'бежевый' },
+            { modName: 'grey', txt: 'серый' },
+        ],
+        sizes:       ['s', 'm', 'l'],
+        description: [
+            { title: 'Детали:', txt: 'Брендированная толстовка от Qazaq Republic. Материал: Хлопок 80%, Вискоза 20%' },
+            { title: 'Как выбрать размер:', txt: 'Написать дяде Рику для уточнения.' },
+        ],
     },
     {
         idItem:    30,
@@ -27,7 +45,16 @@ const cardsMassive = [
         newItem:   false,
         priceItem: 180,
         titleItem: 'Недохуди "Эволюционируй или Эволюционируй или"',
-        sizesItem: 'Размеры S/M/L',
+        colors:    [
+            { modName: 'blue', txt: 'синий' },
+            { modName: 'beige', txt: 'бежевый' },
+            { modName: 'grey', txt: 'серый' },
+        ],
+        sizes:       ['s', 'm', 'l'],
+        description: [
+            { title: 'Детали:', txt: 'Брендированная толстовка от Qazaq Republic. Материал: Хлопок 80%, Вискоза 20%' },
+            { title: 'Как выбрать размер:', txt: 'Написать дяде Рику для уточнения.' },
+        ],
     },
     {
         idItem:    40,
@@ -37,7 +64,16 @@ const cardsMassive = [
         newItem:   true,
         priceItem: 140,
         titleItem: 'Недохуди "Эволюционируй или Эволюционируй или"',
-        sizesItem: 'Размеры S/M/L',
+        colors:    [
+            { modName: 'blue', txt: 'синий' },
+            { modName: 'beige', txt: 'бежевый' },
+            { modName: 'grey', txt: 'серый' },
+        ],
+        sizes:       ['s', 'm', 'l'],
+        description: [
+            { title: 'Детали:', txt: 'Брендированная толстовка от Qazaq Republic. Материал: Хлопок 80%, Вискоза 20%' },
+            { title: 'Как выбрать размер:', txt: 'Написать дяде Рику для уточнения.' },
+        ],
     },
     {
         idItem:    50,
@@ -47,7 +83,16 @@ const cardsMassive = [
         newItem:   false,
         priceItem: 220,
         titleItem: 'Футболка "Эволюционируй или Эволюционируй или"',
-        sizesItem: 'Размеры S/M/L',
+        colors:    [
+            { modName: 'blue', txt: 'синий' },
+            { modName: 'beige', txt: 'бежевый' },
+            { modName: 'grey', txt: 'серый' },
+        ],
+        sizes:       ['s', 'm', 'l'],
+        description: [
+            { title: 'Детали:', txt: 'Брендированная толстовка от Qazaq Republic. Материал: Хлопок 80%, Вискоза 20%' },
+            { title: 'Как выбрать размер:', txt: 'Написать дяде Рику для уточнения.' },
+        ],
     },
 ];
 
