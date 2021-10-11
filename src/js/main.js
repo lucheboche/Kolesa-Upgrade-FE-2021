@@ -1,59 +1,8 @@
 import '../scss/main.scss';
+import cardsMassive from './cardsMassive';
 
 let innerHtmlText = '';
 const divCards = document.querySelector('.cards');
-const cardsMassive = [
-    {
-        idItem:    10,
-        typeItem:  1,
-        fotoUrl:   '/src/img/image 4.png',
-        fotoAlt:   't-shirt',
-        newItem:   true,
-        priceItem: 220,
-        titleItem: 'Футболка "Эволюционируй или Эволюционируй или"',
-        sizesItem: 'Размеры S/M/L',
-    },
-    {
-        idItem:    20,
-        typeItem:  1,
-        fotoUrl:   '/src/img/image 4.png',
-        fotoAlt:   't-shirt',
-        newItem:   false,
-        priceItem: 110,
-        titleItem: 'Футболка "Эволюционируй или Эволюционируй или"',
-        sizesItem: 'Размеры S/M/L',
-    },
-    {
-        idItem:    30,
-        typeItem:  2,
-        fotoUrl:   '/src/img/image 7.png',
-        fotoAlt:   'shirt',
-        newItem:   false,
-        priceItem: 180,
-        titleItem: 'Недохуди "Эволюционируй или Эволюционируй или"',
-        sizesItem: 'Размеры S/M/L',
-    },
-    {
-        idItem:    40,
-        typeItem:  2,
-        fotoUrl:   '/src/img/image 7.png',
-        fotoAlt:   'shirt',
-        newItem:   true,
-        priceItem: 140,
-        titleItem: 'Недохуди "Эволюционируй или Эволюционируй или"',
-        sizesItem: 'Размеры S/M/L',
-    },
-    {
-        idItem:    50,
-        typeItem:  1,
-        fotoUrl:   '/src/img/image 4.png',
-        fotoAlt:   't-shirt',
-        newItem:   false,
-        priceItem: 220,
-        titleItem: 'Футболка "Эволюционируй или Эволюционируй или"',
-        sizesItem: 'Размеры S/M/L',
-    },
-];
 
 const buildCardsInnerHTML = function (el) {
     innerHtmlText += `

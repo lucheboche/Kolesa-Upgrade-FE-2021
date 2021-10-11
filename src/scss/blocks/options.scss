@@ -17,7 +17,9 @@
         cursor: pointer;
 
         &--main {
+            height: 36px;
             padding: 0 20px;
+            text-transform: capitalize;
         }
 
         &--colors {
