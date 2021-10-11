@@ -3,6 +3,8 @@ import cardsMassive from './cardsMassive';
 
 let innerHtmlText = '';
 const divCards = document.querySelector('.cards');
+const divTabs = document.querySelectorAll('.js-tab');
+const checkedTab = +document.querySelector('.js-tab:checked').dataset.idTab;
 
 const buildCardsInnerHTML = function (el) {
     innerHtmlText += `
@@ -185,21 +187,24 @@ const buildModal = function (param) {
                 </div>
             </div>
         </div>`;
+
     document.body.prepend(divModal);
+
     document.body.style.overflow = 'hidden';
-    // document.querySelector('.js-close').addEventListener('click', () => {
-    //     document.querySelector('.modal').remove();
-    //     document.body.style.overflowY = 'visible';
-    // }, { once: true });
+
+    document.querySelector('.js-close').addEventListener('click', () => {
+        document.querySelector('.modal').remove();
+        document.body.style.overflowY = 'visible';
+    }, { once: true });
 };
 
 const buildCardsTag = function (event) {
-    // const cardsListeners = document.querySelectorAll('.js-card');
+    const cardsListeners = document.querySelectorAll('.js-card');
 
-    // if (cardsListeners.length > 0) {
-    //     cardsListeners
-    //         .forEach(card => card.removeEventListener('click', eventCard => buildModal(eventCard)));
-    // }
+    if (cardsListeners.length > 0) {
+        cardsListeners
+            .forEach(card => card.removeEventListener('click', eventCard => buildModal(eventCard)));
+    }
 
     let tip;
 
@@ -217,19 +222,11 @@ const buildCardsTag = function (event) {
 
     divCards.innerHTML = innerHtmlText;
     innerHtmlText = '';
-    // document.querySelectorAll('.js-card')
-    //     .forEach(card => card.addEventListener('click', eventCard => buildModal(eventCard)));
+    document.querySelectorAll('.js-card')
+        .forEach(card => card.addEventListener('click', eventCard => buildModal(eventCard)));
 };
 
-const removeModal = () => {
-    document.querySelector('.modal').remove();
-    document.body.style.overflowY = 'visible';
-};
-
-document.querySelectorAll('.js-tab')
-    .forEach(tab => tab.addEventListener('change', event => buildCardsTag(event)));
-
-const checkedTab = +document.querySelector('.js-tab:checked').dataset.idTab;
+divTabs.forEach(tab => tab.addEventListener('change', event => buildCardsTag(event)));
 
 cardsMassive.sort((b, a) => {
     if (a.newItem > b.newItem) {
@@ -241,20 +238,6 @@ cardsMassive.sort((b, a) => {
     }
 
     return 0;
-});
-
-document.addEventListener('click', (event) => {
-    const list = event.target.classList;
-
-    // console.log(event);
-
-    if (list.contains('js-card')) {
-        buildModal(event);
-    }
-
-    if (list.contains('js-close') || list.contains('modal')) {
-        removeModal(event);
-    }
 });
 
 buildCardsTag(checkedTab);
