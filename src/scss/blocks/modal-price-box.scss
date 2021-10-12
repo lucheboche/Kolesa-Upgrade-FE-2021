@@ -2,6 +2,9 @@
 @import '../mixin.scss';
 
 .price-box {
+    display: flex;
+    justify-content: space-between;
+
     &__pricebtn {
         @include flexcol;
 
@@ -44,8 +47,8 @@
     }
 
     &__tvoibalans-box {
-        display: flex;
-        flex-direction: column;
+        @include flexcol;
+
         justify-content: space-between;
     }
 

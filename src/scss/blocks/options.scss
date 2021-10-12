@@ -4,6 +4,7 @@
 .options {
     display: flex;
     gap: 8px;
+    flex-wrap: wrap;
 
     &__tab {
         display: flex;
@@ -16,12 +17,20 @@
         border-radius: 8px;
         cursor: pointer;
 
-        &--p20 {
+        &--main {
+            height: 36px;
             padding: 0 20px;
+            text-transform: capitalize;
         }
 
-        &--pr12 {
+        &--colors {
             padding-right: 12px;
+            text-transform: capitalize;
+        }
+
+        &--sizes {
+            padding: 0 16px;
+            text-transform: uppercase;
         }
     }
 
@@ -48,5 +57,9 @@
         &--grey-color {
             background: $colors-square-grey;
         }
+    }
+
+    &__title {
+        margin-bottom: 8px;
     }
 }

@@ -37,14 +37,13 @@
     }
 
     &__btn {
+        @include boxsh;
+
         width: 150px;
         height: 36px;
         margin: 0 40px;
         color: $second-color;
         background: white;
-
-        @include boxsh;
-
         border: $main-box;
         border-radius: 8px;
         align-self: center;
