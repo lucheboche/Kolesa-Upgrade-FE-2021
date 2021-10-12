@@ -1,6 +1,7 @@
 @import '../vars.scss';
 @import '../mixin.scss';
-@import './modal-box.scss';
+@import './modal-foto-side.scss';
+@import './modal-txt-side.scss';
 
 .modal {
     position: fixed;
@@ -12,6 +13,7 @@
     width: 100vw;
     height: 100vh;
     z-index: 10;
+    overflow-y: hidden;
 
     &::before {
         content: '';
@@ -25,13 +27,23 @@
         cursor: pointer;
     }
 
-    &__modal-box {
+    &__box {
         position: relative;
         display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
+        gap: 24px;
         background: white;
         border-radius: 16px;
         padding: 56px;
+    }
+
+    &__close {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 24px;
+        right: 24px;
+        background-color: unset;
+        cursor: pointer;
     }
 }
