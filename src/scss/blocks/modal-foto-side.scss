@@ -2,10 +2,8 @@
 @import '../mixin.scss';
 
 .modal-foto-side {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 330px;
+    @include flexcol;
+
     gap: 16px;
 
     &__preview {
