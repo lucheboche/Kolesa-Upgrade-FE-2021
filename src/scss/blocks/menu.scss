@@ -1,0 +1,35 @@
+@import '../vars.scss';
+@import '../mixin.scss';
+
+.menu {
+    &__link-item {
+        position: relative;
+        list-style: none;
+        font-size: 16px;
+        padding-bottom: 24px;
+
+        &--bolds {
+            font-weight: 600;
+
+            &::before {
+                position: absolute;
+                left: -12px;
+                top: -4px;
+                content: '';
+                height: 36px;
+                width: 4px;
+                background-color: $second-color;
+                border-radius: 10px;
+            }
+        }
+    }
+
+    &__link {
+        color: $main-color;
+        text-decoration: none;
+
+        &:hover {
+            font-weight: 600;
+        }
+    }
+}

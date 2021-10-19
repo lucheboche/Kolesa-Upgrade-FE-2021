@@ -1,0 +1,65 @@
+@import '../vars.scss';
+@import '../mixin.scss';
+
+.options {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+
+    &__tab {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 40px;
+        height: 40px;
+        color: $second-color;
+        border: $main-box;
+        border-radius: 8px;
+        cursor: pointer;
+
+        &--main {
+            height: 36px;
+            padding: 0 20px;
+            text-transform: capitalize;
+        }
+
+        &--colors {
+            padding-right: 12px;
+            text-transform: capitalize;
+        }
+
+        &--sizes {
+            padding: 0 16px;
+            text-transform: uppercase;
+        }
+    }
+
+    .input-radio:checked + &__tab {
+        color: $main-color;
+        background: $radio-checked-bg-color;
+        border: 1px solid $none-color;
+    }
+
+    &__square {
+        width: 24px;
+        height: 24px;
+        margin: 0 8px;
+        border-radius: 4px;
+
+        &--blue-color {
+            background: $colors-square-blue;
+        }
+
+        &--beige-color {
+            background: $colors-square-beige;
+        }
+
+        &--grey-color {
+            background: $colors-square-grey;
+        }
+    }
+
+    &__title {
+        margin-bottom: 8px;
+    }
+}

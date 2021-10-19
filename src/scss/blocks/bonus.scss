@@ -1,0 +1,44 @@
+@import '../vars.scss';
+@import '../mixin.scss';
+
+.bonus {
+    display: flex;
+    justify-content: space-between;
+
+    &__image {
+        padding-left: 16px;
+        padding-right: 24px;
+    }
+
+    &__btn {
+        width: 330px;
+        height: 76px;
+        border-radius: 16px;
+
+        @include font20;
+
+        font-weight: 600;
+        justify-content: start;
+        transition: 0.1s box-shadow ease-in;
+
+        &:hover {
+            @include boxsh;
+        }
+
+        &:active {
+            @include boxsh($none-color);
+        }
+
+        &--green {
+            background: $payed-green;
+        }
+
+        &--yellow {
+            background: $payed-yellow;
+        }
+
+        &--blue {
+            background: $payed-blue;
+        }
+    }
+}

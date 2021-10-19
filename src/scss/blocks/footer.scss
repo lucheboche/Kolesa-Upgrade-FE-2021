@@ -1,0 +1,56 @@
+@import '../vars.scss';
+@import '../mixin.scss';
+
+.footer {
+    padding: 0 $calc-width 0 $calc-width;
+    display: grid;
+    grid-template-columns: 948px auto auto;
+    background-color: $main-color;
+
+    &__social {
+        @include flexcol;
+
+        padding: 20px 0 20px 32px;
+        align-self: center;
+        align-items: start;
+        justify-content: space-around;
+    }
+
+    &__social-kolesa {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    &__social-link {
+        color: white;
+        text-decoration: none;
+    }
+
+    &__social-other {
+        display: flex;
+        gap: 12px;
+    }
+
+    &__text {
+        color: white;
+        align-self: center;
+    }
+
+    &__btn {
+        @include boxsh;
+
+        width: 150px;
+        height: 36px;
+        margin: 0 40px;
+        color: $second-color;
+        background: white;
+        border: $main-box;
+        border-radius: 8px;
+        align-self: center;
+
+        &:hover {
+            color: white;
+            background: $second-color;
+        }
+    }
+}

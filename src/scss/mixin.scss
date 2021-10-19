@@ -1,0 +1,13 @@
+@mixin flexcol {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin boxsh($color: $border-shadow-color ) {
+    box-shadow: 0 2px 4px $color;
+}
+
+@mixin font20 {
+    font-size: 20px;
+    line-height: 32px;
+}

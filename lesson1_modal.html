@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/src/assets/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/css/style.css">
+    <title>lesson2</title>
+  </head>
+  <body>
+    <div class="modal">
+        <div class="container">
+            <button class="btn close">
+                <img
+                src="/src/img/close-big.svg"
+                alt="close"
+                width="32"
+                height="32"
+                >
+            </button>
+            <div class="fotocontainer">
+                <img
+                src="/src/img/image 7.png"
+                alt="Большая футболка"
+                width="330"
+                height="330"
+                >
+                <div class="preview-container">
+                    <label>
+                        <input type="radio" name="preview">
+                        <div class="small">
+                            <img
+                            src="/src/img/small1.png"
+                            alt="Превью1"
+                            width="50"
+                            height="50"
+                            >
+                        </div>
+                    </label>
+                    <label>
+                        <input type="radio" name="preview" checked>
+                        <div class="small">
+                            <img
+                            src="/src/img/small2.png"
+                            alt="Превью2"
+                            width="50"
+                            height="50"
+                            >
+                        </div>
+                    </label>
+                    <label>
+                        <input type="radio" name="preview">
+                        <div class="small">
+                            <img
+                            src="/src/img/small3.png"
+                            alt="Превью3"
+                            width="50"
+                            height="50"
+                            >
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <div class="description">
+                <h3 class="title">
+                    Футболка "Эволюционируй или сдохни"
+                </h3>
+                <div class="price-container">
+                    <div class="pricebtn-container">
+                        <div class="price">
+                            100 баллов
+                        </div>
+                        <button class="btn">
+                            Попросить 50 баллов
+                        </button>
+                    </div>
+                    <div class="balance-container">
+                        <div class="tvoibalans-container">
+                            <h3 class="title">
+                                Твой баланс:
+                            </h3>
+                            <div class="balance">
+                                50 баллов
+                            </div>
+                        </div>
+                        <img src="/src/img/balans_icon.png" alt="Bags" class="image">
+                    </div>
+                </div>
+                <form>
+                    <div class="colors-container">
+                        <h3 class="title">
+                            Цвета:
+                        </h3>
+                        <div class="options">
+                            <input type="radio" id="blue" name="color" value="blue" checked>
+                            <label for="blue" class="label">
+                                <div class="color">
+                                    <div class="square"></div>
+                                    Синий
+                                </div>
+                            </label>
+                            <input type="radio" id="beige" name="color" value="beige">
+                            <label for="beige" class="label">
+                                <div class="color">
+                                    <div class="square"></div>
+                                    Бежевый
+                                </div>
+                            </label>
+                            <input type="radio" id="grey" name="color" value="grey">
+                            <label for="grey" class="label">
+                                <div class="color">
+                                    <div class="square"></div>
+                                    Серый
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="sizes-container">
+                        <h3 class="title">
+                            Размер:
+                        </h3>
+                        <div class="options">
+                            <input type="radio" id="s" name="size" value="s" checked>
+                            <label for="s" class="label">
+                                <div class="size">
+                                    S
+                                </div>
+                            </label>
+                            <input type="radio" id="m" name="size" value="m">
+                            <label for="m" class="label">
+                                <div class="size">
+                                    M
+                                </div>
+                            </label>
+                            <input type="radio" id="l" name="size" value="l">
+                            <label for="l" class="label">
+                                <div class="size">
+                                    L
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </form>
+                <div class="details-container">
+                    <h3 class="title">
+                        Детали:
+                    </h3>
+                    <div class="txt">
+                        Брендированная толстовка от Qazaq Republic. Материал: Хлопок 80%, Вискоза 20%
+                    </div>
+                </div>
+                <div class="howchoose-container">
+                    <h3 class="title">
+                        Как выбрать размер:
+                    </h3>
+                    <div class="txt">
+                        Написать дяде Рику для уточнения.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>

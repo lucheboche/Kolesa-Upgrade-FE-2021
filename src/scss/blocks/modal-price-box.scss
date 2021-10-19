@@ -1,0 +1,62 @@
+@import '../vars.scss';
+@import '../mixin.scss';
+
+.price-box {
+    display: flex;
+    justify-content: space-between;
+
+    &__pricebtn {
+        @include flexcol;
+
+        justify-content: space-between;
+    }
+
+    &__price {
+        @include font20;
+
+        font-weight: 600;
+        transform: translateY(-8px);
+    }
+
+    &__btn {
+        @include boxsh;
+
+        font-size: inherit;
+        line-height: inherit;
+        border-radius: 8px;
+        padding: 0 20px;
+        min-width: 184px;
+        height: 36px;
+        background: $btn-bg-color-yellow;
+        transition: 0.1s box-shadow ease-out;
+    }
+
+    &__btn:active {
+        @include boxsh($none-color);
+    }
+
+    &__balance-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-width: 196px;
+        height: 68px;
+        background: $balans-bg-color;
+        border-radius: 16px;
+        padding: 8px 16px;
+    }
+
+    &__tvoibalans-box {
+        @include flexcol;
+
+        justify-content: space-between;
+    }
+
+    &__balance-title {
+        color: $title-color-grey;
+    }
+
+    &__balance {
+        font-size: 16px;
+    }
+}

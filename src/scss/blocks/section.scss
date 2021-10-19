@@ -1,0 +1,20 @@
+@import '../vars.scss';
+@import '../mixin.scss';
+@import './menu.scss';
+@import './content.scss';
+
+.section {
+    padding: 0 $calc-width 0 $calc-width;
+    display: grid;
+    grid-template-columns: 312px auto;
+
+    &__menu {
+        margin-left: 32px;
+    }
+
+    &__content {
+        @include flexcol;
+
+        margin-right: 88px;
+    }
+}

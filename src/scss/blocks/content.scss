@@ -1,0 +1,33 @@
+@import '../vars.scss';
+@import '../mixin.scss';
+@import './bonus.scss';
+@import './options.scss';
+@import './description.scss';
+@import './card-item.scss';
+
+.content {
+    &__banner {
+        content: '';
+        width: 1040px;
+        height: 336px;
+        background-color: $payed-blue;
+        border-radius: 8px;
+        margin-bottom: 24px;
+    }
+
+    &__bonus {
+        margin-bottom: 40px;
+    }
+
+    &__options {
+        margin-bottom: 16px;
+    }
+
+    &__cards {
+        margin-bottom: 192px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 330px);
+        gap: 24px;
+    }
+}

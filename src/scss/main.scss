@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+@import './vars.scss';
+@import './mixin.scss';
+@import './blocks/btm.scss';
+@import './blocks/header.scss';
+@import './blocks/section.scss';
+@import './blocks/footer.scss';
+@import './blocks/modal.scss';
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    color: $main-color;
+    width: 100vw;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 104px 1fr auto;
+    overflow-x: hidden;
+}
+
+img {
+    background-color: unset;
+    display: block;
+}
+
+.input-radio {
+    display: none;
+}

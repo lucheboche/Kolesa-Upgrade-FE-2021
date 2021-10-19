@@ -1,0 +1,48 @@
+@import '../vars.scss';
+@import '../mixin.scss';
+@import './modal-foto-side.scss';
+@import './modal-txt-side.scss';
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+
+    &::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: $main-color;
+        opacity: 0.6;
+        cursor: pointer;
+    }
+
+    &__box {
+        position: relative;
+        display: flex;
+        gap: 24px;
+        background: white;
+        border-radius: 16px;
+        padding: 56px;
+    }
+
+    &__close {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 24px;
+        right: 24px;
+        background-color: unset;
+        cursor: pointer;
+    }
+}

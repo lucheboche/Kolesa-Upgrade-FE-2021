@@ -1,0 +1,10 @@
+@import '../vars.scss';
+@import '../mixin.scss';
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: unset;
+    cursor: pointer;
+}

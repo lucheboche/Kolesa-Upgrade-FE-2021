@@ -1,0 +1,36 @@
+@import '../vars.scss';
+@import '../mixin.scss';
+
+.modal-foto-side {
+    @include flexcol;
+
+    gap: 16px;
+
+    &__preview {
+        display: flex;
+        justify-content: center;
+        width: 330px;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    &__preview-image {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    .input-radio:checked + &__preview-image::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 50px;
+        height: 50px;
+        border-radius: 8px;
+        z-index: 3;
+        border: 1px solid $second-color;
+    }
+}
