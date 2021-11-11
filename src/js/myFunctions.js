@@ -37,8 +37,12 @@ export function insertHtmlToApp(data, appElement, errorElement) {
     if (data.result !== 'ok' || typeof data.html === 'undefined') {
         errorElement.innerHTML = 'Произошла ошибка, попробуйте ещё раз.';
         showElement(errorElement);
-    } else {
-        appElement.innerHTML = data.html;
-        showElement(appElement);
+
+        return false;
     }
+
+    appElement.innerHTML = data.html;
+    showElement(appElement);
+
+    return true;
 }

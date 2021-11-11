@@ -17,8 +17,9 @@ export default () => {
 
     getItemsRequest()
         .then(({ data }) => {
-            insertHtmlToApp(data, appElement, errorElement);
-            runButtonElements(appElement);
+            if (insertHtmlToApp(data, appElement, errorElement)) {
+                runButtonElements(appElement);
+            }
         })
         .catch((e) => {
             errorElement.innerHTML = e.message;
