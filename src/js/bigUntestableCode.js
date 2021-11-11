@@ -9,7 +9,7 @@ import {
 
 const errorElement = document.querySelector('#error');
 const loaderElement = document.querySelector('#loader');
-const appElement = document.createElement('div');
+const appElement = document.querySelector('#app');
 
 export default () => {
     offElement(errorElement);
