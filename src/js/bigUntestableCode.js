@@ -1,13 +1,15 @@
+import { getItemsRequest } from './requests';
+
 import {
-    getItemsRequest,
     showElement,
     offElement,
+    insertHtmlToApp,
     runButtonElements,
-} from './requests';
+} from './myFunctions';
 
 const errorElement = document.querySelector('#error');
-const appElement = document.querySelector('#app');
 const loaderElement = document.querySelector('#loader');
+const appElement = document.createElement('div');
 
 export default () => {
     offElement(errorElement);
@@ -15,14 +17,8 @@ export default () => {
 
     getItemsRequest()
         .then(({ data }) => {
-            if (data.result !== 'ok' || typeof data.html === 'undefined') {
-                errorElement.innerHTML = 'Произошла ошибка, попробуйте ещё раз.';
-                showElement(errorElement);
-            } else {
-                appElement.innerHTML = data.html;
-                showElement(appElement);
-                runButtonElements(appElement);
-            }
+            insertHtmlToApp(data, appElement, errorElement);
+            runButtonElements(appElement);
         })
         .catch((e) => {
             errorElement.innerHTML = e.message;

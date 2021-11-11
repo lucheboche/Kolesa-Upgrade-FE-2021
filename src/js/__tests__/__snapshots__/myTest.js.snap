@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Группа тестов домашнего задания. Тест на добавление контента на страницу в блок #app. 1`] = `
+<div
+  id="app"
+  style="display: block;"
+>
+  
+        
+  <button
+    data-id="1"
+    id="btn"
+  >
+    Кнопка 1
+  </button>
+  
+        
+  <button
+    data-id="2"
+    id="btn"
+  >
+    Кнопка 2
+  </button>
+  
+        
+  <button
+    data-id="3"
+    id="btn"
+  >
+    Кнопка 3
+  </button>
+</div>
+`;
